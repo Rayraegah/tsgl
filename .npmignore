@@ -1,0 +1,12 @@
+src
+coverage
+docs
+tslint.json
+*.log
+.circleci
+.gitignore
+.vscode
+.publishrc
+.rpt2_cache
+tsconfig.json
+tslint.json
