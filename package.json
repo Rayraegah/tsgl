@@ -7,7 +7,7 @@
         "typescript",
         "utility"
     ],
-    "repository": "git@github.com:rayraegah/tsgql",
+    "repository": "git@github.com:rayraegah/tsxgql",
     "author": "rayraegah <rayraegah@gmail.com>",
     "license": "GPL-3.0",
     "main": "dist/index.js",
