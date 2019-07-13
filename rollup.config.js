@@ -14,7 +14,7 @@ export default {
         {
             file: 'dist/index.js',
             format: 'cjs',
-            name: 'tsgql',
+            name: 'tsxgql',
             sourcemap: true,
         },
         {

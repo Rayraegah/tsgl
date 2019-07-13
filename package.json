@@ -1,5 +1,5 @@
 {
-    "name": "tsgql",
+    "name": "tsxgql",
     "version": "1.0.0",
     "description": "Typed GraphQL Queries",
     "keywords": [
@@ -9,7 +9,7 @@
     ],
     "repository": "git@github.com:rayraegah/tsgql",
     "author": "rayraegah <rayraegah@gmail.com>",
-    "license": "MIT",
+    "license": "GPL-3.0",
     "main": "dist/index.js",
     "jsnext:main": "dist/index.es.js",
     "module": "dist/index.es.js",

@@ -1,11 +1,11 @@
-# TSGQL
+# TypeScript x GraphQL
 
 A utility to enhance the developer experience of writing GraphQL in TypeScript.
 
 ## Installlation
 
 ```bash
-npm install --save tsgql
+npm install --save tsxgql
 
 ```
 
@@ -14,7 +14,7 @@ npm install --save tsgql
 Defines GraphQL-like JS Object:
 
 ```typescript
-import { params, types } from 'tsgql'
+import { params, types } from 'tsxgql'
 
 const getUserQuery = {
     user: params(
@@ -36,7 +36,7 @@ const getUserQuery = {
 Converts the JS Object to GraphQL (string):
 
 ```typescript
-import { query } from 'tsgql'
+import { query } from 'tsxgql'
 
 const gqlString = query('getUser', getUserQuery)
 
@@ -78,7 +78,7 @@ const result: typeof getUser = await executeGraphql(gqlString)
 
 ## Features
 
-Currently `tsgql` can convert these GraphQL features:
+Currently `tsxgql` can convert these GraphQL features:
 
 -   Operations
     -   Query
@@ -116,7 +116,7 @@ query getUser {
 ```
 
 ```typescript
-import { query, types } from 'tsgql'
+import { query, types } from 'tsxgql'
 
 query('getUser', {
     user: {
@@ -140,7 +140,7 @@ query {
 ```
 
 ```typescript
-import { query, types } from 'tsgql'
+import { query, types } from 'tsxgql'
 
 query({
     user: {
@@ -163,7 +163,7 @@ mutation updateUserMutation($input: UserInput!) {
 ```
 
 ```typescript
-import { mutation, params } from 'tsgql'
+import { mutation, params } from 'tsxgql'
 
 mutation('updateUserMutation', params({ $input: 'UserInput!' }, {
   updateUser: params({ input: '$input' }, {
@@ -197,7 +197,7 @@ query getUser {
 ```
 
 ```typescript
-import { query, types } from 'tsgql'
+import { query, types } from 'tsxgql'
 
 query('getUser', {
     user: {
@@ -231,7 +231,7 @@ query getUsers {
 ```
 
 ```typescript
-import { params, query, types } from 'tsgql'
+import { params, query, types } from 'tsxgql'
 
 query('users', {
     users: params({ status: 'active' }, [
@@ -246,7 +246,7 @@ query('users', {
 ### Optional Field
 
 ```typescript
-import { optional, query, types } from 'tsgql'
+import { optional, query, types } from 'tsxgql'
 
 query('getUser', {
   user: {
@@ -272,7 +272,7 @@ query getUser {
 ```
 
 ```typescript
-import { query, types } from 'tsgql'
+import { query, types } from 'tsxgql'
 
 query('getUser', {
     user: {
@@ -296,7 +296,7 @@ query getUser {
 ```
 
 ```typescript
-import { query, types } from 'tsgql'
+import { query, types } from 'tsxgql'
 
 enum UserType {
     'Student',
@@ -328,7 +328,7 @@ query getFatherAndMother {
 ```
 
 ```typescript
-import { query, types } from 'tsgql'
+import { query, types } from 'tsxgql'
 
 query('getFatherAndMother', {
     father: {
@@ -356,7 +356,7 @@ query getMaleUser {
 ```
 
 ```typescript
-import { alias, query, types } from 'tsgql'
+import { alias, query, types } from 'tsxgql'
 
 query('getMaleUser', {
   [alias('maleUser', 'user')]: {
@@ -393,7 +393,7 @@ fragment bankAccountFragment on BankAccount {
 ```
 
 ```typescript
-import { alias, fragment, params, query } from 'tsgql'
+import { alias, fragment, params, query } from 'tsxgql'
 
 const bankAccountFragment = fragment('bankAccountFragment', 'BankAccount', {
   id: types.number,
@@ -435,7 +435,7 @@ query getHeroForEpisode {
 ```
 
 ```typescript
-import { on, query, types } from 'tsgql'
+import { on, query, types } from 'tsxgql'
 
 query('getHeroForEpisode', {
     hero: {
@@ -469,7 +469,7 @@ query getHeroForEpisode {
 ```
 
 ```typescript
-import { onUnion, query, types } from 'tsgql'
+import { onUnion, query, types } from 'tsxgql'
 
 query('getHeroForEpisode', {
     hero: {
@@ -507,7 +507,7 @@ if (droidOrHuman.kind === 'Droid') {
 import 'babel-polyfill' // polyfill `Symbol` and `Map`
 import * as React from 'react'
 import { View, Text } from 'react-native'
-import { query, types } from 'tsgql'
+import { query, types } from 'tsxgql'
 
 const queryString = query({
     getUser: {
